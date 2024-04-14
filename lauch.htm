@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Launch Pad Control</title>
+    <style>
+        body {
+          text-align: center;  /* Center content */
+          font-family: sans-serif; /* A basic font */
+        }
+
+        button {
+          font-size: 24px; /* Larger button text  */
+          padding: 15px 30px;  /* Add padding around button text */
+          margin-bottom: 20px; /* Space between buttons */
+          border: 2px solid black; /* Example border  */
+          border-radius: 5px;      /* Slightly rounded corners */
+          background-color: lightgray; /* Example background */
+        }
+
+        #launchButton { background-color: lightgreen; }
+        #abortButton { background-color:  lightcoral; }
+    </style>
+</head>
+<body>
+    <h1>Launch Pad Control</h1>
+    <button id="connectButton">Connect</button>
+    <button id="launchButton" disabled>Launch</button>
+    <button id="abortButton" disabled>Abort</button>
+    <div id="status"></div>
+
+    <script src="script.js"></script> </body>
+</html>
