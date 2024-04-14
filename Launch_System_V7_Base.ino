@@ -11,8 +11,8 @@
 #define RELAY_ADDR 0x18 // Alternate address 0x19
 Qwiic_Relay relay(RELAY_ADDR); 
 
-HT16K33 display;
-HT16K33 display2;
+HT16K33 display; // First display, for pad status and launch information
+HT16K33 display2; // Second display, for bluetooth connection status
 QwiicButton button;
 
 uint32_t next;
@@ -23,10 +23,10 @@ uint16_t cycleTime = 1000;   //The total time for the pulse to take. Set to a bi
 uint16_t offTime = 200;     //The total time to stay off between pulses. Set to 0 to be pulsing continuously.
 
 boolean statusLaunched = false;   // tracks if launch has occurred
-boolean abortLaunch = false;     // for an abort of the launch
+boolean abortLaunch = false;     // tracks an abort event
 
 // set all pins
-const int buzzer = 10; // this pin is the constant large buzzer
+const int buzzer = 10; // this pin is the constant large buzzer, no longer used
 const int pinLaunch = 12;   // this pin lights fuse that fires the rocket motor through the relay
 const int pinFire = 5;     // this pin has an LED that tells if the fuse is LIT or not
 const int pinServo = 9;   // the pin attached to the launch clamp servo
